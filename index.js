@@ -1,10 +1,10 @@
-//let newrelic = require("newrelic");
+let newrelic = require("newrelic");
 let express = require("express");
 let fs = require("fs");
 
 let app = express();
 
-let port = process.env.PORT | 5000;
+let port = process.env.PORT || 5000;
 
 // CORS enable
 app.use(function(req, res, next) {
