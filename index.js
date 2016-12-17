@@ -1,3 +1,4 @@
+let newrelic = require("newrelic");
 let express = require("express");
 let fs = require("fs");
 
@@ -5,7 +6,7 @@ let app = express();
 
 let port = process.env.PORT | 5000;
 
-  
+// CORS enable
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
